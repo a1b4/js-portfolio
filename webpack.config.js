@@ -22,12 +22,16 @@ module.exports = {
         }
       },
       {
-        test: /\.css|.styl$/,
+        test: /\.css|.styl$/i,
         use: [
           MiniCssExtractPlugin.loader,
           'css-loader',
           'stylus-loader'
         ]
+      },
+      {
+        test: /\.png/,
+        type: 'asset/resource'
       }
     ]
   },
